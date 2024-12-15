@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: NotoSans;
+    src: url('./font/NotoSansJP-Regular.ttf');
+}
+
+@font-face {
+    font-family: NotoSansBold;
+    src: url('./font/NotoSansJP-Bold.ttf') ;
+}
+
+
+
+h3{font-family: NotoSansBold;}
+/* defautl */
+*{margin: 0; padding: 0;}
+*,*::before, *::after{box-sizing: border-box;}
+*:hover{transition: all .4s;}
+.table td, .table th{vertical-align: middle}
+p{margin-bottom: 0;}
+a{color:var(--color-text); transition: all .4s; text-decoration: none;}
+ul{list-style: none; margin-bottom: 0; }
+img{max-width: 100%; }
+body{
+    position: relative;
+    font-size: 16px;
+    color: black;
+    font-family: NotoSans;
+    scroll-behavior: smooth;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+#header{position: sticky ; top: 0; background-color: white;}
+#header .container{border-bottom: 5px solid #008000b3; padding: 20px 0; position: relative;}
+#header h1{text-align: center;}
+#header .wrap-button{position: absolute; height: 100%; right: 0; top: 0; display: flex; align-items: center;}
+#header button{font-size: 23px; background-color: brown; color:  white; padding: 10px 40px; border: 1px solid brown;  }
+#header button:hover{background-color: white; color: brown;}
+
+ul.nav{display: flex; justify-content: space-between; align-items: center; margin: 20px 20px;}
+ul.nav li button{background-color: #008000b3 !important; padding: 10px 60px; font-size: 23px ; color: white;}
+ul.nav li button:hover{color: white; background-color: #0d6a0d !important;}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{background-color: #0d6a0d !important;}
+
+.item-print{display: flex; align-items: center; justify-content: space-between;}
+.item-print .checkbox-print{width: 30%; text-align: center;}
+.item-print .checkbox-print input{height: 30px; width: 30px; border: 3px solid #0d6a0d;}
+.form-check-input:checked{background-color: #0d6a0d;}
+.item-print img{border: 2px solid #0d6a0d; padding: 10px; width: 70%; margin-bottom: 20px;}
+
+ .a4 .block:first-child{border-right: 2px solid grey; border-bottom: 2px solid grey;}
+ .a4 .block:nth-child(2){border-bottom: 2px solid grey;}
+ .a4 .block:nth-child(3){border-right: 2px solid grey;}
+

@@ -1,0 +1,144 @@
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1000px;
+  }
+}
+@media (max-width: 576px) {
+    body{
+        letter-spacing: 0px;
+        font-size: 16px;
+        /* background: url('../images/bg_mobile.png');
+        background-size: contain;
+    background-position-y: -10px;
+    background-repeat: repeat-y; */
+    }
+    br.mobile{display: block;}
+    #newsletter input{width: 80%;}
+    .main-button{width: 75%; margin-top: 50px;}
+    #header .logo{width: 40%; margin: 20px;}
+    .menu{display: flex; align-items: center; margin-right: 20px;}
+    .menu-pc{padding:  0 50px;}
+    .menu-pc div > ul{padding-left: 0px;}
+    .showmenu-pc{display: none;}
+    .showmenu-mobile{display: block;}
+    .vision-mobile{display: block;}
+    .vision-pc{display: none;}
+    #banner h1::before{width: 20px; height: 18px; left: -30px;}
+    #banner h1::after{width: 20px; height: 18px; right: -30px; bottom: -5px;}
+    #banner h1{font-size: 28px;}
+    #banner .sub-title{font-size: 14px;}
+    #banner h1 img:first-child{margin-top: -25px;}
+    #banner h1 img:last-child{margin-bottom: -10px;}        
+    .css-container{padding: 60px 20px; border-bottom: none; position: relative;}
+    .css-container::before{content: ""; height: 1px; background-color: black; width: 80%; position: absolute; bottom: 0; left: calc(10%);}
+    .css-container.has-title{padding: 55px 20px 60px 20px;}
+    #description{ line-height: unset; font-size: 18px;}
+    #description .css-container{padding: 60px 50px;}
+    #description br{display: none;}
+    .group-title{margin-bottom: 50px;}
+    .group-title h3{font-size: 35px;}
+    #news .new-item .content-new{display: flex; flex-direction: column;  width: 85%;}
+    #news .list-new{padding: 0 ; }
+    #service .list-service{margin-top: 0; margin-bottom: 50px;}
+    #service .list-service .item-service  .img{width: 100%;}
+    #service .list-service .item-service .content{width: 100%;}
+    #service .list-service .item-service .img img{width: 100%;}
+    #service .list-service .item-service{
+        flex-direction: column-reverse;
+    }
+    #philosophy .our-mission .title-absolute{top: -55px;}
+    #philosophy .our-mission .title-absolute h3{font-size: 20px;}
+    #service .list-service .item-service .content{padding: 25px 20px;}
+    #service .list-service .item-service:nth-child(2){
+        flex-direction: column;
+    }
+    #service .list-service .item-service:first-child .content::before{
+        top: -58px;
+        left: 40px;
+        border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 40px solid #F39C83;
+    }
+    #service .list-service .item-service:nth-child(2) .content::before{
+        top: -58px;
+        left: calc(50% - 20px);
+        border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 40px solid #8ECBDA;
+    }
+
+    #service .list-service .item-service:nth-child(3) .content::before{
+        top: -58px;
+        right: 40px;
+        left: unset;
+        border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 40px solid #9999BD;
+    }
+    #service .list-service .item-service .content h4{font-size: 23px;}
+
+    footer{padding: 50px 0 25px 0;}
+    #news .new-item{margin-bottom: 20px;}
+    #news .new-item .content-new p{font-size: 100%;}
+    #news .new-item .content-new p:last-child{font-size: 17px;}
+    #case-study .list-studies{justify-content: center;}
+    #case-study .list-studies img{width: 31%;}
+    #contact .content{margin-bottom: 50px; font-size: 19px;}
+    #contact .css-container::before{display: none;}
+    #philosophy .our-mission{margin: 50px 0; padding: 50px 0 30px 0;}
+    footer p{margin-top: 50px; font-size: 13px;}
+    footer img{margin-bottom: 20px;}
+    footer a{font-size: 16px;}
+    .effect{top: 0; height: 100%;}
+    .effect .effect-item{height: 100vh;}
+    .effect .effect-item img:first-child{top: 12%; height: 290px; width: 18%; left: -13px;}
+    .effect .effect-item img:last-child{top: 11%; height: 350px; width: 22%;}
+    .effect .effect-item img:nth-child(2){top: 32%;height: 320px; width: 25%; left: 15%;}
+    .effect .effect-item img:nth-child(4) {top: 34%; height: 330px; width: 25%; right: 15%;}
+    .effect .effect-item img:nth-child(3){top: 56%;height: 210px; width:  18%}
+    .main-button{font-size: 17px;}
+    #contact .main-button{width: 80%; font-size: 21px;}
+    #philosophy .our-mission p{font-size: 19px;}
+    #philosophy .our-mission p:last-child{font-size: 17px; margin-top: 15px;}
+    #philosophy .content p:first-child{margin-bottom: 19px;}
+    #philosophy .content p{text-align: justify; font-size: 19px;}
+    #service .content p{font-size: 19px; line-height: 30px;}
+    #newsletter input{font-size: 18px;}
+    #service .content.text-center p{text-align: justify;}
+    #service .content.text-center p br{display: none}
+    .close-showmenu-mobile{
+      display: block;
+      position: absolute;
+      top: 9px;
+      right: 20px;
+    }
+    .closemenu-pc{display: none;}
+    .div-menu{width: 100%;}
+    .menu-pc .div-menu > ul > li{display: none; transform: translateX(-100%);}
+    .menu-pc.show .div-menu > ul > li:nth-child(1){
+      animation: fadeInLeft 0.3s ease 0.3s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(2){
+      animation: fadeInLeft 0.3s ease 0.35s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(3){
+      animation: fadeInLeft 0.3s ease 0.4s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(4){
+      animation: fadeInLeft 0.3s ease 0.45s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(5){
+      animation: fadeInLeft 0.3s ease 0.5s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(6){
+    animation: fadeInLeft 0.3s ease 0.55s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(7){
+      animation: fadeInLeft 0.3s ease 0.6s 1 forwards;
+  }
+  .menu-pc.show .div-menu > ul > li:nth-child(8){
+    animation: fadeInLeft 0.3s ease 0.65s 1 forwards;
+}
+  
+    
+}
