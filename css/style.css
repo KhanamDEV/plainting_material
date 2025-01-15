@@ -1,17 +1,7 @@
 
-@font-face {
-    font-family: NotoSans;
-    src: url('./font/NotoSansJP-Regular.ttf');
-}
-
-@font-face {
-    font-family: NotoSansBold;
-    src: url('./font/NotoSansJP-Bold.ttf') ;
-}
 
 
-
-h3{font-family: NotoSansBold;}
+h3{font-family: "Zen Kaku Gothic New"; font-weight: bold}
 /* defautl */
 *{margin: 0; padding: 0;}
 *,*::before, *::after{box-sizing: border-box;}
@@ -25,7 +15,7 @@ body{
     position: relative;
     font-size: 16px;
     color: black;
-    font-family: NotoSans;
+    font-family: "Zen Kaku Gothic New";
     scroll-behavior: smooth;
     background-color: white;
     overflow-x: hidden;
@@ -49,7 +39,10 @@ ul.nav li button:hover{color: white; background-color: #0d6a0d !important;}
 .form-check-input:checked{background-color: #0d6a0d;}
 .item-print img{border: 2px solid #0d6a0d; padding: 10px; width: 70%; margin-bottom: 20px;}
 
- .a4 .block:first-child{border-right: 2px solid grey; border-bottom: 2px solid grey;}
- .a4 .block:nth-child(2){border-bottom: 2px solid grey;}
- .a4 .block:nth-child(3){border-right: 2px solid grey;}
+.a4.portrait .block:first-child, .a4.portrait .block:nth-child(3){border-right: 2px solid grey; border-bottom: 2px solid grey;}
+.a4.portrait .block:nth-child(2), .a4.portrait .block:nth-child(4){border-bottom: 2px solid grey;}
+.a4.portrait .block:nth-child(5){border-right: 2px solid grey;}
 
+.a4.landscape .block:first-child, .a4.landscape .block:nth-child(2){border-right: 2px solid grey; border-bottom: 2px solid grey;}
+.a4.landscape .block:nth-child(3){border-bottom: 2px solid grey;}
+.a4.landscape .block:nth-child(4),.a4.landscape .block:nth-child(5){border-right: 2px solid grey}
