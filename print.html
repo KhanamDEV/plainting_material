@@ -67,9 +67,9 @@
             let template = ``;
             let arrayImgChunk = splitArray(source, 6)
             arrayImgChunk.forEach((chunkArray) => {
-                template += `<div class="a4 ${orientation}" style="height: ${orientation === 'portrait' ? 1055 : 815}px;  width: ${orientation === 'portrait' ? 815 : 1055}px; display: flex; flex-wrap: wrap;">`;
+                template += `<div class="a4 ${orientation}" style="height: ${orientation === 'portrait' ? 1055 : 815}px;  width: ${orientation === 'portrait' ? 815 : 1055}px; display: flex; flex-wrap: wrap; place-content: flex-start">`;
                 chunkArray.forEach(img => {
-                    template += `<div class="block" style="width: ${orientation === 'portrait' ? 50 : 33}%; height: ${orientation === 'portrait' ? 33 : 50}%; display: flex; align-items: center; justify-content: center;" > <img style="width: 100%;" src="${window.origin}/${img.replaceAll('./', '')}" alt=""></div>`
+                    template += `<div class="block" style="width: ${orientation === 'portrait' ? 50 : 33}%; height: ${orientation === 'portrait' ? 33 : 50}%; display: flex; align-items: center; justify-content: center;" > <img style="height: 100%;" src="${window.origin}/${img.replaceAll('./', '')}" alt=""></div>`
                 })
                 template += '</div>'
             });

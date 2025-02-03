@@ -41,7 +41,7 @@ ul.nav li button:hover{color: white; background-color: #0d6a0d !important;}
 
 /*.a4.portrait .block:first-child, .a4.portrait .block:nth-child(3){border-right: 2px solid grey; border-bottom: 2px solid grey;}*/
 /*.a4.portrait .block:nth-child(2), .a4.portrait .block:nth-child(4){border-bottom: 2px solid grey;}*/
-/*.a4.portrait .block:nth-child(5){border-right: 2px solid grey;}*/
+/*.a4.portrait {border-bottom: 2px solid grey;}*/
 
 /*.a4.landscape .block:first-child, .a4.landscape .block:nth-child(2){border-right: 2px solid grey; border-bottom: 2px solid grey;}*/
 /*.a4.landscape .block:nth-child(3){border-bottom: 2px solid grey;}*/
