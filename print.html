@@ -44,13 +44,15 @@
                 </label>
             </div>
         </div>
-        <div id="content" style="display: flex; justify-content: center; flex-direction: column; align-items: center">
+        <div id="content" style="">
 
         </div>
     </div>
 </main>
 <script src="./js/jquery-3.7.1.min.js"></script>
 <script src="./js/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
     $(function () {
         let orientation = 'portrait';
@@ -87,9 +89,23 @@
                 html2pdf().from(clonedElement).set({
                     jsPDF: { unit: 'in', format: 'letter', orientation: orientation }
                 }).toPdf().get('pdf').then(function (pdf) {
-                    window.open(pdf.output('bloburl'), '_blank');
+                    Swal.fire({
+                        timer: 1000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            const timer = Swal.getPopup().querySelector("b");
+                            timerInterval = setInterval(() => {
+                                timer.textContent = `${Swal.getTimerLeft()}`;
+                            }, 100);
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval);
+                        }
+                    }).then((result) => {
+                        window.open(pdf.output('bloburl'), '_blank');
+                    });
                 });
-
         })
     })
 
