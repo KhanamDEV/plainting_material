@@ -87,7 +87,10 @@
             var element = document.getElementById('content');
             var clonedElement = element.cloneNode(true);
                 html2pdf().from(clonedElement).set({
-                    jsPDF: { unit: 'in', format: 'letter', orientation: orientation }
+                    jsPDF: { unit: 'in', format: 'letter', orientation: orientation },
+                    dpi: 300,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 4 },
                 }).toPdf().get('pdf').then(function (pdf) {
                     Swal.fire({
                         timer: 1000,
