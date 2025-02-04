@@ -1,22 +1,31 @@
 $(function () {
   localStorage.setItem('sources', JSON.stringify([]));
-  $(".checkbox-print").click(function () {
-    let source = localStorage.getItem('sources') == null ? [] : JSON.parse(localStorage.getItem('sources'));
-    let src = $(this).parent().find('img').attr('src');
-    if (source.includes(src)) {
-      source = source.filter(e => e != src);
-    } else {
-      source.push(src);
-    }
-    console.log(source);
-    localStorage.setItem('sources', JSON.stringify(source))
-  })
+
   $('.btn-print').click(() => {
-    let source = localStorage.getItem('sources') == null ? [] : JSON.parse(localStorage.getItem('sources'));
-    if (!source.length) {
+    let imgs = [];
+    $('.form-check-input:checkbox:checked').each((index, e) => {
+      imgs.push($(e).parent().parent().find('img').attr('src'))
+    });
+    if (!imgs.length) {
       alert("画像を選択してください！");
       return;
     }
-    window.open('./print.html', '_blank');
+    localStorage.setItem('sources', JSON.stringify(imgs))
+    Swal.fire({
+      timer: 1000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      }
+    }).then((result) => {
+       window.open('./print.html', '_blank');
+    });
   })
 });
